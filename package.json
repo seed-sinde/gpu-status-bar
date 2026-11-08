@@ -1,0 +1,44 @@
+{
+  "name": "gpu-status-bar",
+  "displayName": "GPU Status Bar",
+  "description": "Displays real-time NVIDIA GPU memory usage, temperature and clock frequency in the VS Code status bar.",
+  "version": "0.0.1",
+  "publisher": "seed-sinde",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seed-sinde/gpu-status-bar.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "gpu",
+    "nvidia",
+    "status bar",
+    "temperature",
+    "vram",
+    "monitoring"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "GPU Status Bar",
+      "properties": {
+        "gpuStatusBar.updateInterval": {
+          "type": "number",
+          "default": 2000,
+          "description": "How often the GPU information is updated (in milliseconds)"
+        }
+      }
+    }
+  }
+}
